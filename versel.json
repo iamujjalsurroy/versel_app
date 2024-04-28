@@ -1,10 +1,15 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "main.py",
-        "use": "@vercel/python"
-      }
-    ]
-  }
-  
+  "version": 0,
+  "builds": [
+    {
+      "src": ".",
+      "use": ".venv/lib/python3.x/site-packages"  # Replace with your virtual env path
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/$1"  # Forward all requests to /api prefix
+    }
+  ]
+}
