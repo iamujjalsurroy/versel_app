@@ -1,15 +1,19 @@
 {
-  "version": 0,
-  "builds": [
-    {
-      "src": ".",
-      "use": ".venv/lib/python3.x/site-packages"  # Replace with your virtual env path
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/api/$1"  # Forward all requests to /api prefix
-    }
-  ]
-}
+    "version": 0,
+    "builds": [
+      {
+        "src": ".",
+        "use": ".vercel/build",
+        "config": {
+          "environment": {
+            "MONGODB_USERNAME": "rovonod596",
+            "MONGODB_PASSWORD": "qDHxMuczWqT4jJfv",
+            "MONGODB_HOST": "cluster0.c0szyw0.mongodb.net",
+            "MONGODB_DATABASE": "basic_app",
+            "MONGODB_COLLECTION": "credentials",
+            "FLASK_DEBUG": "false"  
+          }
+        }
+      }
+    ]
+  }
