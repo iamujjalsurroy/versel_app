@@ -24,6 +24,5 @@ def get_login_details():
     all_details = list(collection.find())
     return json.dumps(all_details, default=json_util.default)
 
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False, host="0.0.0.0", port=int(os.environ.get("PORT", 80)))
