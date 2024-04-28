@@ -1,19 +1,15 @@
 {
-    "version": 0,
+    "version": 2,
     "builds": [
-      {
-        "src": ".",
-        "use": ".vercel/build",
-        "config": {
-          "environment": {
-            "MONGODB_USERNAME": "rovonod596",
-            "MONGODB_PASSWORD": "qDHxMuczWqT4jJfv",
-            "MONGODB_HOST": "cluster0.c0szyw0.mongodb.net",
-            "MONGODB_DATABASE": "basic_app",
-            "MONGODB_COLLECTION": "credentials",
-            "FLASK_DEBUG": "false"  
-          }
+        {
+            "src": "./main.py",
+            "use": "@vercel/python"
         }
-      }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
     ]
-  }
+}
