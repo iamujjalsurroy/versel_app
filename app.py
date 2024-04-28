@@ -6,6 +6,6 @@ app = Flask(__name__)
 def start():
     return "Hello Ujjal"
 
-@app.route("/mbsa")
+@app.route("/ujjal")
 def mbsa():
     return render_template('index.html')
