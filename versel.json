@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "your_flask_app.py",
+        "use": "@vercel/python"
+      }
+    ]
+  }
+  
